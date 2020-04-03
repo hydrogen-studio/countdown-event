@@ -18,8 +18,9 @@
   </div>
 </div>
 
-<video width="400" controls>
-  <source src="https://www.youtube.com/watch?v=zMg1JcBSwDs" type="video/mp4">
+<video width="400" controls id="videodiv">
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
 </video>
 
@@ -37,7 +38,6 @@
     'minutes': minutes,
     'seconds': seconds
   };
-  if(t === 0)
 }
 
 function initializeClock(id, endtime) {
@@ -57,6 +57,7 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
+      
     }
   }
 
@@ -81,6 +82,10 @@ h1{
   font-weight: 100;
   font-size: 40px;
   margin: 40px 0px 20px;
+}
+
+#videodiv {
+  visibility: visible;
 }
 
 #clockdiv{
