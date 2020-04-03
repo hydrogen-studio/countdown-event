@@ -18,6 +18,11 @@
   </div>
 </div>
 
+<video width="400" controls>
+  <source src="https://www.youtube.com/watch?v=zMg1JcBSwDs" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
 <script>
 	function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -32,6 +37,7 @@
     'minutes': minutes,
     'seconds': seconds
   };
+  if(t === 0)
 }
 
 function initializeClock(id, endtime) {
