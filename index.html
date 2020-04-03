@@ -18,11 +18,7 @@
   </div>
 </div>
 
-<video width="400" controls id="videodiv">
-  <source src="mov_bbb.mp4" type="video/mp4">
-  <source src="mov_bbb.ogg" type="video/ogg">
-  Your browser does not support HTML5 video.
-</video>
+<h1 id="videodiv"></h1>
 
 
 <script>
@@ -58,7 +54,7 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
-      
+      document.getElementById("videodiv").innerHTML = 'Live Event Starting! <a href="http://live.hydrogenbot.xyz">Go to event</a>'
     }
   }
 
@@ -66,7 +62,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = 'April 12 2020 17:00:00 GMT+0000';;
+var deadline = 'April 2 2020 20:20:00 GMT-0700';;
 initializeClock('clockdiv', deadline);  
 </script>
 
@@ -85,8 +81,13 @@ h1{
   margin: 40px 0px 20px;
 }
 
-#videodiv {
-  visibility: visible;
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
 }
 
 #clockdiv{
