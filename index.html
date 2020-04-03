@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<div id="videodiv"></div>
+<h1 id="videodiv"></h1>
 
 
 <script>
@@ -54,7 +54,7 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
-      document.getElementById("videodiv").innerHTML = '<iframe id="botiframe" onload="setCampaignIframe('');" src="http://live.hydrogenbot.xyz/" id="botiframe"></iframe><p></p>'
+      document.getElementById("videodiv").innerHTML = 'Event Starting! Click <a href="http://live.hydrogenbot.xyz">here</a> to go to event!'
     }
   }
 
@@ -62,7 +62,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = 'April 2 2020 21:05:00 GMT-0700';;
+var deadline = 'April 2 2020 21:07:00 GMT-0700';;
 initializeClock('clockdiv', deadline);  
 </script>
 
